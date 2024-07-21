@@ -1,6 +1,6 @@
 import './setup-aliases'; // This should be the first import
 import express, { Express } from 'express';
-import { PORT } from "../environment";
+import { PORT } from "./environment";
 import { dataSource } from "./db/data-source";
 
 const app: Express = express();

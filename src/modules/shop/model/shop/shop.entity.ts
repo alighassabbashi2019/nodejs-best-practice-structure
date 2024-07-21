@@ -1,12 +1,8 @@
-import { Entity, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
-import { LocationEntity } from '@globals/models/location/location.entity';
+import { Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ schema: 'shop', name: 'Shops' })
 export class ShopEntity {
 
     @PrimaryGeneratedColumn('uuid')
     id: string;
-
-    @OneToOne(() => LocationEntity, location => location.shop)
-    address: LocationEntity;
 }
